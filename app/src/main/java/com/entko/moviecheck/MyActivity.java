@@ -42,7 +42,7 @@ import java.util.List;
 
 
 public class MyActivity extends Activity {
-
+    //Keys witheld
     private static final String ROTTEN_API_KEY = keys.getRottenKey();
     private static final String TMDB_API_KEY = keys.getTmdbKey();
 
@@ -174,6 +174,7 @@ public class MyActivity extends Activity {
             searchLayout.removeAllViews();
             ratingsLayout.removeAllViews();
 
+            //Minimize keyboard on button click
             InputMethodManager inputManager = (InputMethodManager)
                     getSystemService(Context.INPUT_METHOD_SERVICE);
 
@@ -379,6 +380,7 @@ public class MyActivity extends Activity {
             }
         }
 
+        //Retrieve the top 4 search results from API call
         private void selectMovie(JSONArray moviesArray) {
             for(int j = 0; j < moviesArray.length(); j++) {
                 try {
@@ -395,6 +397,7 @@ public class MyActivity extends Activity {
             setMovieObjects();
         }
 
+        //Set the movie buttons for user to select movie
         private void setMovieObjects() {
             String titleTemp;
             String yearTemp;
@@ -513,6 +516,7 @@ public class MyActivity extends Activity {
             }
         }
 
+        //Use TMDb API to retrieve movie poster
         private void getPoster(String result) {
             try {
                 tmdbJSONObject = new JSONObject(result);
@@ -523,6 +527,8 @@ public class MyActivity extends Activity {
             }
         }
 
+
+        //Convert image from url into Bitmap
         private Bitmap getImage(String url) {
             HttpURLConnection connection;
             InputStream in = null;
