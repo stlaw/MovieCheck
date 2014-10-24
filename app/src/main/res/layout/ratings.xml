@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/movieInfo"
+        android:baselineAligned="false">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/moviePoster"
+            android:padding="@dimen/button_padding"
+            android:minHeight="@dimen/poster_height"
+            android:minWidth="@dimen/poster_width" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/movieTitleLarge"
+                android:textStyle="bold"
+                android:padding="@dimen/logo_padding"
+                android:paddingTop="@dimen/button_padding" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/moviePlot" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/rotten_logo"
+                android:id="@+id/rottenLogo"
+                android:textStyle="bold"
+                android:padding="@dimen/button_padding"
+                android:textSize="@dimen/logo_font_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rottenFreshnessImage"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="@dimen/logo_padding"
+                android:maxHeight="@dimen/freshness_logo_size"
+                android:maxWidth="@dimen/freshness_logo_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/rottenRatingTextView"
+                android:textSize="@dimen/logo_font_size"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/imdb"
+                android:id="@+id/imdbTextView"
+                android:textStyle="bold"
+                android:textSize="@dimen/logo_font_size"
+                android:padding="@dimen/button_padding" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/imdbRatingTextView"
+                android:textStyle="bold"
+                android:textSize="@dimen/logo_font_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/metacritic"
+                android:id="@+id/metaTextView"
+                android:padding="@dimen/button_padding"
+                android:textStyle="bold"
+                android:textSize="@dimen/logo_font_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/metaRatingTextView"
+                android:textSize="@dimen/logo_font_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/imdb_legal_a"
+            android:id="@+id/textView"
+            android:textSize="@dimen/legal_size"
+            android:gravity="center_horizontal"
+            android:layout_above="@+id/textView2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/imdb_legal_b"
+            android:id="@+id/textView2"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/legal_size"
+            android:gravity="center_horizontal"
+            android:layout_above="@+id/textView3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/imdb_legal_c"
+            android:id="@+id/textView3"
+            android:textSize="@dimen/legal_size"
+            android:gravity="center_horizontal"
+            android:layout_above="@+id/textView4" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/imdb_legal_d"
+            android:id="@+id/textView4"
+            android:textSize="@dimen/legal_size"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal" />
+    </RelativeLayout>
+
+</LinearLayout>

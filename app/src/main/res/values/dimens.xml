@@ -1,0 +1,14 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="button_padding">10dp</dimen>
+    <dimen name="poster_padding">20dp</dimen>
+    <dimen name="title_width">100dp</dimen>
+    <dimen name="logo_padding">3dp</dimen>
+    <dimen name="poster_height">266dp</dimen>
+    <dimen name="poster_width">185dp</dimen>
+    <dimen name="logo_font_size">26sp</dimen>
+    <dimen name="freshness_logo_size">35dp</dimen>
+    <dimen name="legal_size">10sp</dimen>
+</resources>

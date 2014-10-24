@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyActivity"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/entryEditText"
+            android:layout_weight="1"
+            android:hint="@string/enter_movie" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search"
+            android:id="@+id/enterButton" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/resultsLayout">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:id="@+id/searchLayout"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ratingsLayout"
+            android:layout_weight="5"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"></LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

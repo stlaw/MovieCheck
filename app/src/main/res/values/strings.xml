@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MovieCheck</string>
+    <string name="action_settings">Settings</string>
+    <string name="enter_movie">Enter a movie...</string>
+    <string name="search">Search</string>
+    <string name="imdb">IMDb Rating:</string>
+    <string name="metacritic">Metacritic Score:</string>
+    <string name="ok">OK</string>
+    <string name="ratings_async_title">RatingsAsync</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="rotten_logo">Rotten Tomatoes® Score:</string>
+    <string name="imdb_legal_a">Information courtesy of</string>
+    <string name="imdb_legal_b">IMDb</string>
+    <string name="imdb_legal_c">(http://www.imdb.com).</string>
+    <string name="imdb_legal_d">Used with permission.</string>
+
+</resources>
