@@ -5,40 +5,39 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal">
 
-    <!--<HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/horizontalScrollView">-->
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:weightSum="4"
-            android:gravity="center_horizontal">
+            android:gravity="fill_horizontal">
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/button_padding">
+                android:padding="@dimen/button_padding"
+                android:layout_weight="1">
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/movieButton0"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@null" />
+                    android:background="@null"
+                    android:layout_gravity="center_horizontal" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/movieTitle0" />
+                    android:id="@+id/movieTitle0"
+                    android:maxWidth="@dimen/thumbnail_width"
+                    android:gravity="center_horizontal" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/movieYear0" />
+                    android:id="@+id/movieYear0"
+                    android:gravity="center_horizontal" />
 
             </LinearLayout>
 
@@ -46,24 +45,28 @@
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/button_padding">
+                android:padding="@dimen/button_padding"
+                android:layout_weight="1">
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/movieButton1"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@null" />
+                    android:background="@null"
+                    android:layout_gravity="center_horizontal" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/movieTitle1" />
+                    android:id="@+id/movieTitle1"
+                    android:maxWidth="@dimen/thumbnail_width"
+                    android:gravity="center_horizontal" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/movieYear1" />
+                    android:id="@+id/movieYear1"
+                    android:gravity="center_horizontal" />
 
             </LinearLayout>
 
@@ -71,24 +74,28 @@
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/button_padding">
+                android:padding="@dimen/button_padding"
+                android:layout_weight="1">
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/movieButton2"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@null" />
+                    android:background="@null"
+                    android:layout_gravity="center_horizontal" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/movieTitle2" />
+                    android:id="@+id/movieTitle2"
+                    android:maxWidth="@dimen/thumbnail_width"
+                    android:gravity="center_horizontal" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/movieYear2" />
+                    android:id="@+id/movieYear2"
+                    android:gravity="center_horizontal" />
 
             </LinearLayout>
 
@@ -96,24 +103,28 @@
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/button_padding">
+                android:padding="@dimen/button_padding"
+                android:layout_weight="1">
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/movieButton3"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@null" />
+                    android:background="@null"
+                    android:layout_gravity="center_horizontal" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/movieTitle3" />
+                    android:id="@+id/movieTitle3"
+                    android:maxWidth="@dimen/thumbnail_width"
+                    android:gravity="center_horizontal" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/movieYear3" />
+                    android:id="@+id/movieYear3"
+                    android:gravity="center_horizontal" />
 
             </LinearLayout>
         </LinearLayout>

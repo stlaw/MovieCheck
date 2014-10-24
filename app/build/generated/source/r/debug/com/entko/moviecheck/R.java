@@ -21,7 +21,8 @@ public final class R {
         public static final int poster_height=0x7f040007;
         public static final int poster_padding=0x7f040008;
         public static final int poster_width=0x7f040009;
-        public static final int title_width=0x7f04000a;
+        public static final int thumbnail_width=0x7f04000a;
+        public static final int title_width=0x7f04000b;
     }
     public static final class drawable {
         public static final int certified_fresh=0x7f020000;

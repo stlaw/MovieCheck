@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -37,7 +38,6 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 
@@ -48,12 +48,10 @@ public class MyActivity extends Activity {
 
     private static String rottenURL1 = "http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=";
     private static String rottenURL2 = "&page_limit=4&page=1&apikey=";
-    /*private static String imdbURL1 = "http://www.omdbapi.com/?t=";
-    private static String imdbURL2 = "&y=";*/
     private static String imdbURL1 = "http://www.omdbapi.com/?i=";
     private static String tmdbURL1 = "http://api.themoviedb.org/3/movie/";
     private static String tmdbURL2 = "?api_key=";
-    private static String tmdbURL3 = "http://image.tmdb.org/t/p/w154";
+    private static String tmdbURL3 = "http://image.tmdb.org/t/p/w92";
 
     protected EditText entryEditText;
     protected Button enterButton;
@@ -77,7 +75,6 @@ public class MyActivity extends Activity {
     protected JSONObject moviesJSON;
     protected JSONObject ratingsJSON;
     protected JSONArray moviesArray;
-    protected String year;
     protected JSONObject postersJSON;
     protected JSONObject alternateJSON;
 
@@ -110,8 +107,6 @@ public class MyActivity extends Activity {
     protected String metaRating;
     protected String rottenFreshness;
     protected String imdbID;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -161,10 +156,9 @@ public class MyActivity extends Activity {
         movieButtonsList = new ArrayList<ImageButton>(Arrays.asList(movieButton0, movieButton1,
                 movieButton2, movieButton3));
 
-        for (int i = 0; i < movieButtonsList.size(); i++) {
-            movieButtonsList.get(i).setOnClickListener(movieButtonListener);
+        for (ImageButton ib : movieButtonsList) {
+            ib.setOnClickListener(movieButtonListener);
         }
-
         moviePoster = (ImageView) ratingsView.findViewById(R.id.moviePoster);
         movieTitleLarge = (TextView) ratingsView.findViewById(R.id.movieTitleLarge);
         moviePlot = (TextView) ratingsView.findViewById(R.id.moviePlot);
@@ -179,6 +173,12 @@ public class MyActivity extends Activity {
             clearLists();
             searchLayout.removeAllViews();
             ratingsLayout.removeAllViews();
+
+            InputMethodManager inputManager = (InputMethodManager)
+                    getSystemService(Context.INPUT_METHOD_SERVICE);
+
+            inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                    InputMethodManager.HIDE_NOT_ALWAYS);
 
             String query = entryEditText.getText().toString();
             try {
@@ -218,9 +218,7 @@ public class MyActivity extends Activity {
                         } else {
                             rottenFreshness = "null";
                         }
-/*
-                        year = moviesJSON.getString("year");
-*/
+
                         alternateJSON = moviesJSON.getJSONObject("alternate_ids");
                         imdbID = "tt" + alternateJSON.getString("imdb");
                         break;
@@ -233,9 +231,7 @@ public class MyActivity extends Activity {
                         } else {
                             rottenFreshness = "null";
                         }
-/*
-                        year = moviesJSON.getString("year");
-*/
+
                         alternateJSON = moviesJSON.getJSONObject("alternate_ids");
                         imdbID = "tt" + alternateJSON.getString("imdb");
                         break;
@@ -248,9 +244,7 @@ public class MyActivity extends Activity {
                         } else {
                             rottenFreshness = "null";
                         }
-/*
-                        year = moviesJSON.getString("year");
-*/
+
                         alternateJSON = moviesJSON.getJSONObject("alternate_ids");
                         imdbID = "tt" + alternateJSON.getString("imdb");
                         break;
@@ -263,9 +257,7 @@ public class MyActivity extends Activity {
                         } else {
                             rottenFreshness = "null";
                         }
-/*
-                        year = moviesJSON.getString("year");
-*/
+
                         alternateJSON = moviesJSON.getJSONObject("alternate_ids");
                         imdbID = "tt" + alternateJSON.getString("imdb");
                         break;
@@ -290,9 +282,6 @@ public class MyActivity extends Activity {
         imdbRatingTextView.setText("");
         metaRatingTextView.setText("");
 
-        for (int i = 0; i < movieButtonsList.size(); i++) {
-            movieButtonsList.get(i).setBackgroundResource(0);
-        }
     }
 
     private void clearLists() {
@@ -303,6 +292,12 @@ public class MyActivity extends Activity {
         yearsList.clear();
         bitmapsList.clear();
         movieArrayList.clear();
+
+        for (int i = 0; i < movieButtonsList.size(); i++) {
+            movieButtonsList.get(i).setImageResource(android.R.color.transparent);
+            titlesTextViews.get(i).setText("");
+            yearsTextViews.get(i).setText("");
+        }
     }
 
     private class RottenAsync extends AsyncTask<String, String, String> {
@@ -367,9 +362,7 @@ public class MyActivity extends Activity {
                     } else {
                         rottenFreshness = "null";
                     }
-/*
-                    year = moviesJSON.getString("year");
-*/
+
                     alternateJSON = moviesJSON.getJSONObject("alternate_ids");
                     imdbID = "tt" + alternateJSON.getString("imdb");
 
@@ -406,8 +399,6 @@ public class MyActivity extends Activity {
             String titleTemp;
             String yearTemp;
             String posterTemp;
-
-            movieArrayList.clear();
 
             for (int i = 0; i < moviesArray.length(); i++) {
                 titleTemp = titles.get(i);

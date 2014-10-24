@@ -16,9 +16,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/moviePoster"
-            android:padding="@dimen/button_padding"
+            android:padding="@dimen/logo_padding"
             android:minHeight="@dimen/poster_height"
-            android:minWidth="@dimen/poster_width" />
+            android:minWidth="@dimen/poster_width"
+            android:paddingLeft="@dimen/logo_padding" />
 
         <LinearLayout
             android:orientation="vertical"
@@ -31,13 +32,15 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:id="@+id/movieTitleLarge"
                 android:textStyle="bold"
-                android:padding="@dimen/logo_padding"
-                android:paddingTop="@dimen/button_padding" />
+                android:paddingLeft="@dimen/logo_padding"
+                android:paddingBottom="@dimen/logo_padding"
+                android:paddingRight="@dimen/logo_padding" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/moviePlot" />
+                android:id="@+id/moviePlot"
+                android:padding="@dimen/logo_padding" />
         </LinearLayout>
     </LinearLayout>
 
@@ -58,7 +61,7 @@
                 android:text="@string/rotten_logo"
                 android:id="@+id/rottenLogo"
                 android:textStyle="bold"
-                android:padding="@dimen/button_padding"
+                android:padding="@dimen/logo_padding"
                 android:textSize="@dimen/logo_font_size" />
 
             <ImageView
@@ -95,7 +98,7 @@
                 android:id="@+id/imdbTextView"
                 android:textStyle="bold"
                 android:textSize="@dimen/logo_font_size"
-                android:padding="@dimen/button_padding" />
+                android:padding="@dimen/logo_padding" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -118,7 +121,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/metacritic"
                 android:id="@+id/metaTextView"
-                android:padding="@dimen/button_padding"
+                android:padding="@dimen/logo_padding"
                 android:textStyle="bold"
                 android:textSize="@dimen/logo_font_size" />
 
